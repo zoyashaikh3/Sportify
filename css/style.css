@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: 0.2s ease-in-out;
+  color: #000;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Red: hsl(0, 94%, 66%);
+  --Grayish-Blue: hsl(229, 8%, 60%);
+  --Very-Dark-Blue: hsl(229, 31%, 21%);
+}
+
+::selection {
+  background-color: var(--Soft-Red);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Soft-Red);
+}
+
+strong {
+  color: var(--Very-Dark-Blue) !important;
+}
+
+.header {
+  padding: 3rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  left: 0;
+  z-index: 10000;
+  background-color: var(--Soft-Red);
+  box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+  width: 50px;
+  height: auto;
+}
+
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.header .navbar .btn {
+  padding: 0.6rem 3rem;
+  background-color: whitesmoke;
+  color: var(--Soft-Red);
+  border-radius: 0.5rem;
+}
+
+#menu-btn {
+  padding: 1rem 1rem;
+  background-color: #eee;
+  font-size: 3rem;
+  color: var(--Soft-Blue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.header .navbar .btn:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid var(--Soft-Red);
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: initial;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    width: 33rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--Soft-Blue);
+    background-color: #fff;
+    transform: scale(0);
+    transform-origin: top right;
+  }
+
+  .header .navbar.active {
+    transform: scale(1);
+  }
+
+  .header .navbar a {
+    margin: 2.5rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+.home {
+  padding-top: 5rem;
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+
+.home .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 70rem;
+}
+.home .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+@media (max-width: 1200px) {
+  .home .image {
+    width: 80%;
+    max-width: 50rem;
+  }
+  .home .image img {
+    width: 80%;
+  }
+}
+
+.home .content h1 {
+  font-size: 10.5rem;
+  padding-block-end: 1rem 0;
+  color: var(--Very-Dark-Blue);
+  font-family: "Jersey 10", sans-serif;
+}
+
+.home .content p {
+  font-size: 2rem;
+  padding-right: 2rem;
+  text-align: justify;
+  max-width: 60rem;
+  color: var(--Very-Dark-Blue);
+  padding-bottom: 4rem;
+  font-family: "Inter", sans-serif !important;
+}
+
+.home .content .home-btn {
+  padding: 1.3rem 2rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.4rem;
+  box-shadow: 0.5rem 0.5rem var(--Soft-Red);
+  border: 2px solid var(--Soft-Red);
+  border-radius: 0.5rem;
+}
+
+.home .content .home-btn:hover {
+  background-color: var(--Soft-Red);
+  box-shadow: none;
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--Very-Dark-Blue);
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.heading h1 {
+  padding-bottom: 2rem;
+  color: var(--Very-Dark-Blue);
+}
+.heading h1 span {
+  font-size: 6.5rem;
+  font-family: "Jersey 10", sans-serif;
+  color: var(--Very-Dark-Blue);
+}
+
+.heading p {
+  max-width: 90rem;
+  margin: auto;
+  color: var(--Very-Dark-Blue);
+  font-size: 2.5rem;
+}
+.heading p u {
+  font-size: 6.5rem;
+  color: var(--Very-Dark-Blue);
+  font-family: "Jersey 10", sans-serif !important;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .home .image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+    margin-top: 10%;
+  }
+  .home .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-btn {
+    margin-left: 2rem;
+  }
+  .heading p {
+    max-width: 40rem !important;
+  }
+  .user-options {
+    padding: 5rem !important;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* LOGGED-IN USER */
+.user-options {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 10rem;
+}
+
+.option-box {
+  border: 2px solid hsl(0, 94%, 66%);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 4rem;
+  background-color: white;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0.5rem 0.5rem hsl(0, 94%, 66%);
+}
+
+.option-box:hover {
+  border-color: hsl(0, 94%, 80%);
+  box-shadow: none; /* Remove shadow on hover */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.option-box .btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  color: white;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: hsl(0, 94%, 66%);
+  box-shadow: 0.5rem 0.5rem hsl(0, 100%, 84%);
+}
+
+.option-box .btn:hover {
+  background-color: hsl(0, 94%, 66%);
+  box-shadow: none; /* Remove shadow on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Welcome msg */
+.welcome-message {
+  padding-top: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.welcome-message .content h2 {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+}
+.welcome-message .content h2 span {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 7rem;
+  text-align: center;
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+}

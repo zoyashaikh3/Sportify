@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* General styles */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(229, 31%, 21%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2.5rem;
+  margin: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  position: relative;
+}
+
+h2 {
+  color: hsl(229, 31%, 21%);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h2 span {
+  font-size: 2.5rem;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.alert {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.alert.success {
+  background-color: hsl(120, 60%, 60%);
+}
+
+.alert.show {
+  display: block;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 90%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid hsl(231, 69%, 60%);
+  border-radius: 6px;
+  background-color: white;
+  color: hsl(229, 31%, 21%);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+  border-color: hsl(0, 94%, 66%);
+  box-shadow: 0 0 0 3px hsl(0, 94%, 66%, 0.3);
+  outline: none;
+}
+
+select {
+  width: 100% !important;
+}
+
+/* Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: hsl(0, 94%, 66%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(0, 94%, 60%);
+  transform: translateY(-1px);
+}
+
+/* Link */
+p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: hsl(229, 31%, 21%);
+  font-size: 0.9rem;
+}
+
+p a {
+  color: hsl(231, 69%, 60%);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: hsl(0, 94%, 66%);
+}
+
+@media (max-width: 400px) {
+  .form-container {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.choices__inner {
+  display: inline-block;
+  vertical-align: top;
+  width: 95%;
+  background-color: #f9f9f9;
+  padding: 7.5px 7.5px 3.75px;
+  min-height: 44px;
+  overflow: hidden;
+  border: 1px solid hsl(231, 69%, 60%);
+  border-radius: 6px;
+  background-color: white;
+  color: hsl(229, 31%, 21%);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choices__inner:focus {
+  border-color: hsl(0, 94%, 66%);
+  box-shadow: 0 0 0 3px hsl(0, 94%, 66%, 0.3);
+  outline: none;
+}
+
+.home-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.home-icon a {
+  color: #333;
+  text-decoration: none;
+}
+
+.user-events {
+  margin-top: 20px;
+}
+
+.event-box {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.applications {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f1f1f1;
+}
+
+.applications h4 {
+  margin: 0 0 10px;
+}
