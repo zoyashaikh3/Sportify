@@ -1,5 +1,9 @@
 # 🏆 Sportify – Sports Event & Player Connection Platform
 
+> 🚀 **The project is running on:** [http://localhost:8000/](http://localhost:8000/)
+
+The project is running on: http://localhost:8000/
+
 Sportify is a **web-based sports event management and player connection platform** designed to connect sports enthusiasts with local players, playgrounds, and upcoming sporting events.
 
 The platform allows users to **discover sports events, apply for upcoming matches, create their own sports events, and connect with other players** based on their preferred sport and location.
@@ -278,6 +282,8 @@ htdocs/Sportify/
 ```
 
 ### 4. Run the Project
+
+The project is running on: http://localhost:8000/
 
 Open the project in your browser:
 
